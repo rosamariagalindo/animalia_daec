@@ -1,0 +1,116 @@
+
+<!--Pagina web sobre los animales marinos para el proyecto final-->
+<!--Elsa Daniela Martinez Burgueño-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--especifica el conjunto de caracteres que puede usal el documento-->
+	<meta charset="utf-8">
+	<!--se usa para poner un titulo a todo el documento-->
+	<title>animales marinos</title>
+	<!--lenguaje de scripting en que esta escrito el codigo-->
+	<script type="text/javascript">
+		//con esta funcion confirmas si quieres regresar a la pagina anterior
+		function Pag_Ant(){
+			var valor=confirm("¿Estas seguro de volver a '=AVES='");
+			return valor;
+		}
+		//con esta funcion confirmas si quieres avanzar a la pagina siguiente
+		function Sig_Pag(){
+			var pag_sig=confirm("¿Estas seguro que deseas ingresar a '=ANIMALES TERRESTRES='");
+			return pag_sig;
+		}
+	</script>
+</head>
+<body bgcolor="#4da8cf">
+	<FONT FACE=Cambria COLOR=#000000 SIZE=4.5>
+		<p align="right"><script type="text/javascript">
+			//Para colocar la fecha en español
+			//colocamos un array con los meses en español
+			var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+				//creamos una variable para la fecha
+				var f=new Date();
+					//f.getDate() es para imprimir el dia f.getMonth para el mes y getFullYear para el año
+				document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+		</script></p></FONT><hr>
+
+	<font face=Courier color=004173 size=5>
+		<a name="arriba">
+			<!--especifica el titulo del contenido de la paguina-->
+			<center><h1>=ANIMALES MARINOS=</h1><hr></center>
+			<!--distribuye el texto en parrafos; en este caso nos ayuda a justificar el texto-->
+			<p align="justify">
+				<!--usamos esta etiqueta para poner una imagen simple en la pagina-->
+				<img src="https://okdiario.com/img/2019/02/13/descubre-que-agua-beben-los-animales-de-mar.jpg" width="350" height="180" align="right"><font face=Cambria color=black div aling=justify size=4>Los animales marinos, también conocidos como animales del mar, son aquellos que pasan toda o gran parte de su vida viviendo dentro del mar. En este caso, descartaríamos a los animales de ríos y a los animales de los lagos, que aunque son animales acuáticos, no podrían soportar la salinidad del agua de mar.<br>
+				En el mar viven numerosas especies de peces, reptiles, aves y mamíferos vertebrados e invertebrados. En definitiva, podemos encontrar un gran ecosistema que dispone de una extensa biodiversidad de especies y plantas. De hecho, es tan grande que los científicos desconocen la totalidad de las especies que habitan en el fondo marino.<br>
+				Es importante destacar que existen animales marinos que no habitan todo el tiempo en el mar. Por ello, es necesario clasificarlos en dos grandes grupos:
+				<!--crea una lista NO ordenada-->
+				<ul>
+					<!--declara cada uno de los elementos de la lista-->
+					<li><b>Animales marinos no estrictos</b><br>Estos animales marinos no realizan su ciclo de vida totalmente en el mar ya que necesitan de una superficie de tierra o roca para sobrevivir donde descansan o se reproducen. En el mar se sumergen para alimentarse.</li>
+					<li><b>Animales marinos estrictos</b><br>Estos sí realizan completamente su ciclo de vida dentro del mar, ya que fuera del mar serían incapaces de sobrevivir.</li>
+				</ul>
+				<!--produce un salto de linea en el texto-->
+				<br>
+				A muy grandes rasgos, podemos clasificar los animales marinos de acuerdo a las distintas regiones de la masa acuática de los océanos en la que hacen vida. Tenemos así:<br><br>
+				<!--representa datos en dos o mas dimenciones; crea una tabla-->
+				<table>
+					<!--define una fila de celdas en la tabla-->
+					<tr>
+						<!--define una celda como el encabezado de un grupo de celdas; en este caso la clasificacion de las especies-->
+					    <th><font color="004173">Animales de superficie</font></th>
+					    <!--define la celda de una tabla que contiene datos; la definicion de la clasificacion-->
+					    <td><font face=Cambria color=black size=4>Los más cercanos al Sol y por lo tanto acostumbrados a las aguas más cálidas y luminosas, en donde abundan las algas y el plancton, pero también los depredadores.</td>
+					    	<!--la celda contiene un ejemplo de la clasificacion de los animales-->
+					    <th><img src="https://mx.oceana.org/wp-content/uploads/sites/17/Tiburon-blanco.png" idth="100" height="150"></th>
+					</tr>
+					<tr>
+					    <td><img src="https://static.wikia.nocookie.net/reinoanimalia/images/7/76/Arrecifes_de_coral.png/revision/latest?cb=20150820071051&path-prefix=es" idth="100" height="150"></td>
+					    <td><font face=Cambria color=black size=4>Que forman extensas comunidades en torno al coral, las piedras y los bosques de algas de diverso tipo, en algunos de los lugares más biodiversos del planeta, equivalentes a selvas tropicales, pero bajo el mar.</td>
+					    <th><font color="004173">Animales de arrecife</font></th>
+					</tr>
+					<tr>
+					    <th><font color="004173">Animales de profundidad</font></th>
+					    <td><font face=Cambria color=black size=4>Que viven en aguas más frías y oscuras, a mayor profundidad, en un hábitat más exclusivo y retador.</td>
+					    <td><img src="https://t1.ev.ltmcdn.com/es/posts/2/3/6/calamar_vampiro_vampyroteuthis_infernalis_3632_1_600.webp" idth="100" height="150"></td>
+					</tr>
+					<tr>
+					    <td><img src="https://www.ecotiendabuceo.es/wp-content/uploads/peces-abisales-pejesapo-espinoso.jpg" idth="100" height="150"></td>
+					    <td><font face=Cambria color=black size=4>Habitantes de las regiones más hondas, oscuras, gélidas e inhóspitas del mar, a las que no llega la luz solar y que se hallan bajo inmensas presiones ambientales.</td>
+					    <th><font color=004173>Animales abisales</font></th>
+					</tr>
+				</table><br><br>
+				<!--indica que el texto tiene que estar en negrita-->
+				<b>Animales marinos en peligro de extinción</b><br>
+				Para terminar, te mostramos una breve lista de especies de animales marinos en peligro de extinción:
+
+				<ul>
+					<li>El delfín de Maui</li>
+					<li>El pepino de mar</li>
+					<li>La tortuga laúd</li>
+					<li>El pez guitarra</li>
+					<li>La vaquita marina</li>
+					<li>El tiburón blanco</li>
+					<li>La tortuga lora</li>
+					<li>El pez Napoleón</li>
+					<li>La tortuga carey</li>
+					<li>La tortuga verde del Pacífico o prieta</li>
+				</ul>
+			</p>
+			<center>
+				<!--se utiliza para vincular secciones de la pagina; en este caso nos lleva al comienzo de la pagina-->
+				<a href="#arriba"><font face=Cambria color=black size=4>ARRIBA</a><br>
+					<!--utilizamos esta etiqueta para vincular a otra pagina dentro de un sitio web; en este caso a la pagina anterior-->
+				<a href="3p_ProyectoPagAves.html" onclick="return Pag_Ant()"><-Página anterior </a>
+					/
+					<!--esta etiqueta nos lleva a la siguiente pagina-->
+				<a href="proyecto1.html" onclick="return Sig_Pag()">Siguiente página-></a>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</center>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!--Rosa Maria Galindo Sauceda 4AMPRO-->
+<!--30 DE MAYO DE 2022-->
+<!--Realizamos un formulario de termino de curso y para comprobar los conocimientos aprendidos-->
+<!DOCTYPE html>
+<html>
+<head>
+	<!--etiqueta para poder colocar tilde en las palabras-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario</title>
+	<script type="text/javascript">
+		//Esta funcion es de un pop´up de confirm para enviar tus respuestas 
+		function Envi_Exam(){
+			var valor=confirm("¿Estas seguro de enviar tus respuestas? ");
+			return valor;
+		}
+		//esta funcion es tipo radio button en donde una respuesta es verdades y las demas falsas
+		function radio1(){
+			//se crea una variable con valor document.getElementById(el nombre del Id).cheched==true(cuando es verdadero) o ==false(cuando es falso)
+			var ani1=document.getElementById("animal1").checked==true;
+			var ani2=document.getElementById("animal2").checked==false;
+			var ani3=document.getElementById("animal3").cheched==false;
+			//esta funcion para la pregunta 1 aqui se utiliza un if-else que si la variable ani1==true tiene que marcar como correcto y si no es correcto que marque como incorrecto
+			if(ani1==true){
+				document.getElementById("pregunta1").innerHTML="Correcto";
+			}else{
+				document.getElementById("pregunta1").innerHTML="Incorrecto";
+			}
+		}
+		//esta funcion es para la pregunta 2 es de respuesta tipo text, donde cree una variable con valor document.getElementById(nombre del Id).value;
+		function p2(){
+			var preg2=document.getElementById("tipo1").value;
+			//aqui hay un if-else donde si preg2==6 la respuesta marcaracomo correcta y si no como incorrecta 
+			if (preg2==6){
+				document.getElementById("pregunta2").innerHTML="Correcto";
+			}else{
+				document.getElementById("pregunta2").innerHTML="Incorrecto";
+			}
+		}
+		//esta funcion es para la pregunta 3 y es te tipo texto
+		function p3(){
+			var preg3=document.getElementById("tipo2").value;
+			//se utiliza un if-else donde si preg3==7 marca como correcto y si no como Incorrecto 
+			if (preg3==7){
+				document.getElementById("pregunta3").innerHTML="Correcto";
+			}else{
+				document.getElementById("pregunta3").innerHTML="Incorrecto";
+			}
+		}
+		//esta funcion es para la pregunta 4 y es tipo radio button en donde una respuesta es verdades y las demas falsas
+		function radio2(){
+			var es=document.getElementById("estricto").checked==true;
+			var nes=document.getElementById("noestricto").checked==false;
+			//aqui si la varible es es igual a true la respuesta se marca como correcta y si no como incorrecta
+			if(es==true){
+				document.getElementById("pregunta4").innerHTML="Correcto";
+			}else{
+				document.getElementById("pregunta4").innerHTML="Incorrecto";
+			}
+		}
+		//esta funcion es para la pregunta 5 y es de checkbox donde dos o mas son correctas y las otras icorrectas 
+		function checkb(){
+				var le=document.getElementById("leon").checked==false;
+				var pn=document.getElementById("perdizNival").checked==true;
+				var rpc=document.getElementById("rapaces").checked==false;
+				var dm=document.getElementById("delfinMar").checked==false;
+				var ba=document.getElementById("bueyAlmizclero").checked==true;
+				//aqui si pn es igual a true las respuesta sera correcta
+				if(pn==true){
+					document.getElementById("pregunta5").innerHTML="correcta";
+				}else{
+					//si no sera incorrecta
+					document.getElementById("pregunta5").innerHTML="incorrecta"
+				}
+				//si aqui la variable ba es iguala true la respuesta es correca
+				if(ba==true){
+					document.getElementById("pregunta5").innerHTML="correcta";
+				}else{
+					document.getElementById("pregunta5").innerHTML="incorrecta"
+				}
+			}
+			function checkb2(){
+				var tr=document.getElementById("tr").checked==true;
+				var mar=document.getElementById("mar").checked==false;
+				var art=document.getElementById("art").checked==false;
+				var av=document.getElementById("av").checked==false;
+				if(tr==true){
+					document.getElementById("pregunta6").innerHTML="correcta";
+				}else{
+					document.getElementById("pregunta6").innerHTML="incorrecta"
+				}
+			}
+	</script>
+</head>
+<body bgcolor="#78C858">
+	<FONT FACE=Cambria COLOR=#000000 SIZE=4.5>
+		<p align="right"><script type="text/javascript">
+			//Para colocar la fecha en español
+			//colocamos un array con los meses en español
+			var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+				//creamos una variable para la fecha
+				var f=new Date();
+					//f.getDate() es para imprimir el dia f.getMonth para el mes y getFullYear para el año
+				document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+			</script></p></FONT><hr>
+			<!--Aqui comienza la parte html-->
+	<FONT FACE=Courier COLOR=#184F02 SIZE=5>
+		<!--enlace para llevar a la parte de arriba de la pagina-->
+		<a name="ARRIBA"></a>
+		<center><h1>=Examen de Prueba=</h1></center><hr>
+		<FONT FACE=Cambria COLOR=#000000 SIZE=5>
+			<!--coloque un label para poder ingresar el nombre-->
+		<label>Nombre:</label>
+	    <!--para poder crear un textfield y que puedas ingresar informacion-->
+
+		<input type="text"  placeholder="Escribir">
+		<FONT FACE=Cambria COLOR=#000000 SIZE=4><br><br>
+
+			<!--esta es la pregunta uno-->
+			<label><B>1.-¿Qué son los animales?</B></label>
+			<br><br>
+			<!--se especifica que es re tipo radio y se le coloca el id de la variable-->
+			<input type="radio" id="animal1">Es un ser vivo que puede moverse por sus propios medios.
+			<br><br>
+			<!--se especifica que es re tipo radio y se le coloca el id de la variable-->
+			<input type="radio" id="animal2" >Es un conjunto de átomos y moléculas, que forman una estructura material muy organizada y compleja.<br><br>
+			<!--se especifica que es re tipo radio y se le coloca el id de la variable-->
+			<input type="radio" id="animal3">Son seres vivos y autosuficientes, es decir que pueden alimentarse solas y crecer solas.<br>
+			<!--Colocamos un boton con el nombre de la funcion-->
+			<button onclick="radio1()">Comprobar</button>
+			<!--para que pueda marcarse como correcta o incorrecta con el nombre del id-->
+			<div id="pregunta1"></div>
+			<br>
+
+			<!--label con la pregunta-->
+			<label><b>2.-¿Cuántos tipos de aves hay?</b></label>
+			<!--se indica que es de tipo text i se coloca el id de la varible-->
+			<input type="text" id="tipo1" placeholder="Escribir"><br>
+			<!--se coloca un boton con el nombre de la funcion de la pregunta 2-->
+			<button onclick="p2()">Comprobar</button>
+			<!--es para marcar si la respuesta es correcta o incorrecta con el id-->
+			<div id="pregunta2"></div><br>
+
+			<label><b>3.-¿Cuántas clasificaciones de los animales terrestres hay?</b></label>
+			<!--se indica que es de tipo text i se coloca el id de la varible-->
+			<input type="text" id="tipo2" placeholder="Escribir"><br>
+			<!--se coloca un boton con el nombre de la funcion de la pregunta 2-->
+			<button onclick="p3()">Comprobar</button>
+			<!--es para marcar si la respuesta es correcta o incorrecta con el id-->
+			<div id="pregunta3"></div><br>
+
+			<label><b>4.-Estos animales marinos realizan si ciclo de vida completamente dentro del mar.</b></label><br>
+			<!--se indica que el input es de tipo radio y se coloca el Id de la varible-->
+			<input type="radio" id="estricto">Estrictos<br><br>
+			<!--se indica el texto en este caso radio button y se coloca el id de la varible-->
+			<input type="radio" id="noestricto">No estrictos<br>
+			<button onclick="radio2()">Comprobar</button>
+			<!--con esta etiqueta se marca si la respuesta es incorrecta o correcta-->
+			<div id="pregunta4"></div><br>
+
+			<label>5.-¿Cuál de los siguientes animales fueron adaptados para vivir en el ártico?</label>
+			<br><br>
+			<!--se indica que es de tipo checkbox y se coloca el id de la varible-->
+			<input type="checkbox" id="leon">León
+			<br><br>
+			<!--se indica que es de tipo checkbox y se coloca el id de la varible-->
+			<input type="checkbox" id="perdizNival">Perdiz nival
+			<br><br>
+			<!--se indica que es de tipo checkbox y se coloca el id de la varible-->
+			<input type="checkbox" id="rapaces">Rapaces
+			<br><br>
+			<!--se indica que es de tipo checkbox y se coloca el id de la varible-->
+			<input type="checkbox" id="delfinMar">Delfin del Maui
+			<br><br>
+			<!--se indica que es de tipo checkbox y se coloca el id de la varible-->
+			<input type="checkbox" id="bueyAlmizclero">Buey almizclero<br>
+			<!--Se coloca un boton con el nombre de la funcion -->
+			<button onclick="checkb()">Comprobar</button>
+			<!--para marcar si la respuesta es correcta o incorrecta-->
+			<div id="pregunta5"></div><br>
+
+			<label>6.-El oso panda, el elefante, jirafa son ejemplo de: </label>
+			<br><br>
+			<input type="checkbox" id="tr">Animales terrestres
+			<br><br>
+			<input type="checkbox" id="mar">Animales marinos
+			<br><br>
+			<input type="checkbox" id="art">Animales articos
+			<br><br>
+			<input type="checkbox" id="av">Aves <br>
+
+			<button onclick="checkb2()">Comprobar</button>
+			<div id="pregunta6"></div><br><br>
+
+			<FONT FACE=Courier COLOR=#5A4A29 SIZE=5>
+				<!--boton de enlace para llevar a la parte de arriba del codigo-->
+				<center><b><a href=#ARRIBA>ARRIBA</a></b>
+					<br>
+					<FONT FACE=Cambria COLOR=#000000 SIZE=5>
+						<!--un enlace para llevar a la siguiente pagina con el confirm y al darle aceptar te lleva a la siguiente pagina-->
+				<a href="3p_Practicaa.html" onclick="return Envi_Exam()">ENVIAR</a>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				</center>
+
+</body>
+</html>

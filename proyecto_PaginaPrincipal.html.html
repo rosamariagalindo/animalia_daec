@@ -1,0 +1,54 @@
+<!--Blanca Guadalupe Rojo González. 4AMPR.-->
+<!--Esta página habla sobre los animales áricos-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Animales - Página principal</title>
+	<script type="text/javascript">
+		function Ingresar_Pag(){
+			//Función de pop-ups que te pregunta si deseas ingresar a la siguiente página.
+			var valor=confirm("¿Estas seguro(a) que deseas ingresar a '=AVES='");
+			return valor;
+		}
+		function Pag_Mari() {
+			var mari=confirm("¿Estas seguro(a) que deseas ingresar a '=ANIMALES MARINOS='?");
+			return mari;
+		}
+		function Pag_Terres() {
+			var terre=confirm("¿Estas seguro(a) que deseas ingresar a '=ANIMALES TERRESTRES='?");
+			return terre;
+		}
+		function Pag_Arti() {
+			var arti=confirm("¿Estas seguro(a) que deseas ingresar a '=ANIMALES ÁRTICOS='?");
+			return arti;
+		}
+	</script>
+</head>
+<!--Se utiliza  "background=''" para poner una imagen de fondo.-->
+<body background="http://www.teorema.com.mx/wp-content/uploads/se-lellama.jpg">
+	<FONT FACE=Cambria COLOR=#000000 SIZE=4.5>
+		<p align="right"><script type="text/javascript">
+			//Para colocar la fecha en español
+			//colocamos un array con los meses en español
+			var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+				//creamos una variable para la fecha
+				var f=new Date();
+					//f.getDate() es para imprimir el dia f.getMonth para el mes y getFullYear para el año
+				document.write(f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+		</script></p></FONT><hr>
+	<center><font face="Courier" size="7" color="#1C542D"><h1>ANIMALIA</h1></font>
+		<hr>
+		<!--Definición de qué es un animal-->
+		<p><font size="5" color="white">Un animal es un ser vivo que puede moverse por sus propios medios. Por lo general, dentro de la denominación se incluye a los integrantes del reino conocido como Animalia. Existen diversas características compartidas por la mayoría de los animales, aún con sus diferencias.</font></p>
+		<!--Se realiza un <a href=""></a> para que mediante la imagen se pueda ingresar a otra página.-->
+		<a href="3p_ProyectoPagAves.html" onclick="return Ingresar_Pag()"><img src="https://www.infoescola.com/wp-content/uploads/2016/10/aves_617227706.jpg" width="350" height="300"></a>
+		<!--Se realiza un <a href=""></a> para que mediante la imagen se pueda ingresar a otra página.-->
+		<a href="AniMari.html" onclick="return Pag_Mari()"><img src="https://images.ecestaticos.com/__ev6vykQkU8uBBdnGFjL0WI9MA=/3x68:1253x771/996x747/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F79e%2F9d4%2F1c2%2F79e9d41c291b6e9a02a4d143ed4bf51d.jpg" width="350" height="300"></a>
+		<!--Se realiza un <a href=""></a> para que mediante la imagen se pueda ingresar a otra página.-->
+		<a href="proyecto1.html" onclick="return Pag_Terres()"><img src="https://misanimales.com/wp-content/uploads/2018/08/sabana-africana.jpg" width="350" height="300"></a>
+		<!--Se realiza un <a href=""></a> para que mediante la imagen se pueda ingresar a otra página.-->
+		<a href="aniArticos.html" onclick="return Pag_Arti()"><img src="https://natureduca.com/images_ant/ant_recursos_hidrocarb.jpg" width="350" height="300"></a>
+	</center>
+</body>
+</html>
